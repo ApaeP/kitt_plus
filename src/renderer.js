@@ -70,7 +70,14 @@ class Api {
 const api = new Api(fetch);
 
 const button = document.querySelector('.button');
-button.addEventListener('click', async () => {
-  const data = await api.get('/camps/1170/tickets')
+
+const navigateTo = async (path) => {
+  const innerWindow = document.querySelector('.inner-window');
+  const data = await api.get(path)
   console.log(data)
-});
+  innerWindow.innerHTML = data.camp.slug
+}
+
+  button.addEventListener('click', async () => {
+    navigateTo('/camps/1170/tickets')
+  });
