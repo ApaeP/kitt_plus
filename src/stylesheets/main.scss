@@ -1,3 +1,6 @@
-body {
-  background-color: white;
-}
+@import 'config/colors';
+@import 'config/variables';
+@import 'config/animations';
+@import 'config/base';
+
+@import 'components/index';
