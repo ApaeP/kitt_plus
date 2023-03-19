@@ -25,7 +25,8 @@
  *  });
  * ```
  */
-import './index.css';
+// import './index.css';
+import './stylesheets/main.scss';
 
 const fetch = async (url, options = {}) => window.versions.customFetch(url, options);
 // fetch('https://www.comptapp.me/api/v1/test_get',    { method: 'GET' })    .then(response => console.log(response))
